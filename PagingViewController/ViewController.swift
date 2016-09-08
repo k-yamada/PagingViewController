@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     private func createCardViewFromImageName(imageName: String, index: Int, color: UIColor) -> UIView {
         let imageView = UIImageView(frame: CGRectMake(0, 0, cardWidth, cardHeight))
         imageView.image = UIImage(named: imageName)
+        imageView.contentMode = UIViewContentMode.ScaleAspectFit
         imageView.center.x = view.frame.width / 2
         let cardX: CGFloat = CGFloat(index) * view.frame.width
         let cardView = UIView(frame: CGRectMake(cardX, 0, view.frame.width, cardHeight))

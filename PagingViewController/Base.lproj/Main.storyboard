@@ -18,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PPB-NW-p9h">
-                                <rect key="frame" x="0.0" y="64" width="600" height="270"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="270" id="2d2-Wj-ZQD"/>
+                                    <constraint firstAttribute="height" constant="300" id="2d2-Wj-ZQD"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
