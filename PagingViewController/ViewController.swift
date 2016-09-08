@@ -22,23 +22,22 @@ class ViewController: UIViewController {
     }
 
     private func initScrollView() {
-        cardViews.append(createCardViewFromImageName("image1", index: 0, color: UIColor.redColor()))
-        cardViews.append(createCardViewFromImageName("image2", index: 1, color: UIColor.yellowColor()))
-        cardViews.append(createCardViewFromImageName("image3", index: 2, color: UIColor.greenColor()))
+        cardViews.append(createCardViewFromImageName("image1", index: 0))
+        cardViews.append(createCardViewFromImageName("image2", index: 1))
+        cardViews.append(createCardViewFromImageName("image3", index: 2))
         cardViews.forEach {
             scrollView.addSubview($0)
         }
         scrollView.contentSize = CGSizeMake(view.frame.width * CGFloat(cardViews.count), cardHeight)
     }
 
-    private func createCardViewFromImageName(imageName: String, index: Int, color: UIColor) -> UIView {
+    private func createCardViewFromImageName(imageName: String, index: Int) -> UIView {
         let imageView = UIImageView(frame: CGRectMake(0, 0, cardWidth, cardHeight))
-        imageView.image = UIImage(named: imageName)
+        imageView.image = UIImage(named: imageName)?.roundedImage(5)
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         imageView.center.x = view.frame.width / 2
         let cardX: CGFloat = CGFloat(index) * view.frame.width
         let cardView = UIView(frame: CGRectMake(cardX, 0, view.frame.width, cardHeight))
-        cardView.backgroundColor = color
         cardView.addSubview(imageView)
         return cardView
     }
